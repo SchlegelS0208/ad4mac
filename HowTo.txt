@@ -1,21 +1,21 @@
-### Rechner in die neue Domaene schubsen (OSX) ###
-0. Anmeldung als lokaler Admin
-1. Scripts auf den Desktop kopieren (ueber den Finder)
-2. terminal oeffnen (und anschliessend "root" werden)
--> [ALT]+[LEERTASTE] -> terminal -> [ENTER]
-3. root-Rechte erlangen
+### HowTo - Migrate a MAC OS X pc from an old Windows Domain to Windows 2012 R2 ###
+0. logon with an account having local administrator rights
+1. checkout git repo or run wget to get all files (copy all files onto the Desktop)
+2. open a terminal (and become "root")
+-> [ALT]+[SPACE] -> terminal -> [ENTER]
+3. become "root"
 -> sudo su -
-4. zum Desktop navigieren
+4. switch to the Desktop
 -> cd ~/Desktop
-5. Rechner aus alter Domaene entfernen
+5. remove MAC PC from old Windows Domain
 -> ./unjoin_osx.sh
-6. Rechner in neue Domaene aufnehmen
+6. join MAC PC to new Windows Domain
 -> ./adjoin_osx.sh
-7. Berechtigungen der Benutzerordner korrigieren
+7. fix permissions of user-related files
 -> ./fix_permissions_osx.sh
-8. Benutzer in FileVault aufnehmen
+8. add / enable User to use FileVault (optional)
 -> ./fix_filevault.sh
-9. Script-Files loeschen
--> rm -f ./unjoin_osx.sh ./adjoin_osx.sh ./fix_permissions_osx.sh ./fix_filevault.sh
+9. remove all files
+-> rm -f ./unjoin_osx.sh ./adjoin_osx.sh ./fix_permissions_osx.sh ./fix_filevault.sh ./HowTo.txt
 
-Fertig!!
+Done!!
