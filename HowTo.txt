@@ -1,0 +1,21 @@
+### Rechner in die neue Domaene schubsen (OSX) ###
+0. Anmeldung als lokaler Admin
+1. Scripts auf den Desktop kopieren (ueber den Finder)
+2. terminal oeffnen (und anschliessend "root" werden)
+-> [ALT]+[LEERTASTE] -> terminal -> [ENTER]
+3. root-Rechte erlangen
+-> sudo su -
+4. zum Desktop navigieren
+-> cd ~/Desktop
+5. Rechner aus alter Domaene entfernen
+-> ./unjoin_osx.sh
+6. Rechner in neue Domaene aufnehmen
+-> ./adjoin_osx.sh
+7. Berechtigungen der Benutzerordner korrigieren
+-> ./fix_permissions_osx.sh
+8. Benutzer in FileVault aufnehmen
+-> ./fix_filevault.sh
+9. Script-Files loeschen
+-> rm -f ./unjoin_osx.sh ./adjoin_osx.sh ./fix_permissions_osx.sh ./fix_filevault.sh
+
+Fertig!!
